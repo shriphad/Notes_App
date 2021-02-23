@@ -1,0 +1,24 @@
+.Note {
+  min-width: 150px;
+  max-width: 200px;
+  height: auto;
+  float: left;
+  background-color: rgb(148, 168, 163);
+  margin: 0.3rem;
+  border-radius: 12%;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  border-radius: 2px;
+  padding: 10px;
+  margin-bottom: 10px;
+  -webkit-transition: box-shadow 0.3s;
+  transition: box-shadow 0.3s;
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -pre-wrap;
+  white-space: -o-pre-wrap;
+  word-wrap: break-word;
+}
+
+.Note:hover {
+  background-color: rgb(183, 209, 202);
+}
