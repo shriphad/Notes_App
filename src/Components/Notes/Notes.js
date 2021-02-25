@@ -8,6 +8,7 @@ export default function Notes() {
     const [dates, setDates] = useState([]);
     const [date, setDate] = useState("");
     const [error, setError] = useState("");
+    const [search, setSearch] = useState("");
 
     const addNote = () => {
         if (text && date) {
@@ -33,6 +34,18 @@ export default function Notes() {
         setDates(newDates);
     }
 
+    const onEdit = (node, newNode) => {
+        let newNotes = notes.filter(function (x) {
+            if (x === node) {
+                return newNode;
+            }
+            else {
+                return node;
+            }
+        });
+        addNotes(newNotes);
+    }
+
 
     return (
         <>
@@ -50,13 +63,18 @@ export default function Notes() {
                     onChange={e => changeText(e.target.value)}>
                 </textarea>
                 <label htmlFor="start">date:</label>
-                <input type="date" id="start" name="date"
+                <input type="date" id="start" name="date" className="noteSearch"
                     value={date} onChange={e => setDate(e.target.value)}
-                    style={{ "maxWidth": "180px", "marginBottom": "1.1rem" }} />
+                    style={{ "maxWidth": "180px", "margin": "0.6rem" }} />
+                <br />
                 <button className="add-button" onClick={() => addNote()}>Add</button>
             </div>
+
+
+
             <div className="content">
-                <Note notes={notes} date={dates} onDelete={onDelete} />
+                {/* <input className="noteSearch" type="search" placeholder="Search..." onChange={e => setSearch(e.target.value)} /> */}
+                <Note notes={notes} date={dates} onDelete={onDelete} onEdit={onEdit} />
             </div>
         </>
     );
