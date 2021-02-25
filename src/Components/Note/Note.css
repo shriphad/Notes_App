@@ -22,3 +22,7 @@
 .Note:hover {
   background-color: rgb(183, 209, 202);
 }
+
+.cross:hover {
+  background-color: red;
+}
