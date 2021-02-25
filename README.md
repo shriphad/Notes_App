@@ -1,4 +1,13 @@
-# Getting Started with Create React App
+# Assignment for SDE 1 - Frontend
+
+## Objective -
+
+Create an online note making app where users can write notes.
+
+## Application overview -
+
+Users should be able to create notes for any day, edit, and delete them. They should also be able to add a date while creating a note.
+Users should also be able to sort the notes (newest first and oldest first), search the notes, and apply filters (week wise, month wise, and year wise)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

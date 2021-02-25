@@ -37,15 +37,6 @@ export default function Notes() {
                 <button className="add-button" onClick={() => addNote()}>Add</button>
             </div>
             <div className="content">
-                {/* {
-                    notes.map((note, i) => {
-                        return (
-                            <div className="Notes" key={i}>
-                                {note}
-                            </div>
-                        )
-                    })
-                } */}
                 <Note notes={notes} />
             </div>
         </>
